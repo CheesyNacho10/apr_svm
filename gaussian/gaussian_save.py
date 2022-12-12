@@ -27,5 +27,5 @@ for g in G:
       clf=pickle.load(folder + filename,'rb')
 
     etr=(trl!=clf.predict(tr)).mean();
-    print(filename + "\t%8g %8.2f" % (c,etr*100));
+    print(filename + "\t%8g %8g %8.2f" % (g,c,etr*100));
     os.system('du -sh ' + folder + filename)
